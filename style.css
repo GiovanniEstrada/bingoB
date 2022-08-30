@@ -102,6 +102,7 @@ root {
     font-family: 'Silkscreen', cursive;
     color: #fff;
     margin-bottom: 10px;
+    overflow: hidden;
     transition: all 600ms;
 }
 
@@ -128,6 +129,8 @@ root {
     gap: 30px;
     align-items: center;
     justify-content: space-around;
+    overflow:unset;
+    height: auto;
     transform: translateY(-60px);
 }
 
@@ -179,7 +182,7 @@ root {
 
     .panel {
         padding: 10px;
-        width: 260px;
+        width: 300px;
         height: 300px;
         gap: 10px;
     }
@@ -207,11 +210,39 @@ root {
         width: 400;
         height: auto;
         gap: 5px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;  
-        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .panel {
+        padding: 10px;
+        width: 250px;
+        height: 250px;
+        gap: 10px;
     }
     
+    .box {
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+    }
+
+    .game-box {
+        gap: 10px;
+    }
+
+    .title {
+        font-size: 40px;
+        width: 40px;
+        height: 40px;
+        color: #fff;
+    }
+
+    
+    .contain-title {
+        padding: 10px;
+        width: 400;
+        height: auto;
+        gap: 5px;
+    }
 }

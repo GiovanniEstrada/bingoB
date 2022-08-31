@@ -9,6 +9,7 @@ root {
     padding: 0;
     overflow-x: hidden;
     font-family: 'Silkscreen', cursive;
+    user-select: none;
 }
 
 .container {
@@ -60,12 +61,13 @@ root {
 .box:hover {
     border: 1px solid #fff;
     transform: scale(1.2);
+    
 }
 
 
 .completed {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     color: #ff0000;
     position: absolute;
     user-select: none;
@@ -82,7 +84,6 @@ root {
     align-items: center;
     padding: 15px;
     background-color: #fff;
-    position:;
     top: 0;
 }
 
@@ -98,7 +99,7 @@ root {
     font-size: 70px;
     text-align: center;
     width: 75px;
-    height: auto;
+    height: 75px;
     font-family: 'Silkscreen', cursive;
     color: #fff;
     margin-bottom: 10px;
@@ -113,7 +114,7 @@ root {
 .contain-title {
     padding: 10px;
     width: 400;
-    height: 150px;
+    height: 75px;
     gap: 5px;
     display: flex;
     flex-direction: row;
@@ -149,6 +150,9 @@ root {
     font-family: 'Silkscreen', cursive;
     color: #fff;
     min-height: 50px;
+    width: 100%;
+    max-height: 200px;
+    margin-bottom: 15px;
 }
 
 .hidden {
@@ -158,6 +162,7 @@ root {
 }
 
 .details {
+    width: 600px;
     height: auto;
     overflow: visible;
 }
@@ -171,6 +176,12 @@ root {
     text-decoration: none;
     color: #000;
     border-radius: 15px;
+}
+
+@media screen and (max-width:1100px){
+    .details {
+        width: 400px;
+    }
 }
 
 @media screen and (max-width:900px){
@@ -213,22 +224,29 @@ root {
     }
 }
 
+@media screen and (max-width: 440px) {
+    .details {
+        width: 300px;
+    }
+}
+
 @media screen and (max-width: 325px) {
     .panel {
         padding: 10px;
-        width: 250px;
-        height: 250px;
+        width: 280px;
+        height: 280px;
         gap: 10px;
     }
     
     .box {
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
         font-size: 25px;
+        border-radius: 5px;
     }
 
     .game-box {
-        gap: 10px;
+        gap: 5px;
     }
 
     .title {
